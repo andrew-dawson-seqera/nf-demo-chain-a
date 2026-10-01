@@ -47,12 +47,11 @@ process PUBLISH_AND_MARK {
     path csv
 
     output:
-    path 'samples.csv'
+    path csv
     path '.marker-a-complete'
 
     script:
     """
-    cp ${csv} samples.csv
     touch .marker-a-complete
     """
 }
